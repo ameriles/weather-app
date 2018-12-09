@@ -1,0 +1,29 @@
+.weather-data-container {
+    padding: 8px;
+    width: 400px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    background-color: #aaa;
+    border-radius: 3px;
+}
+
+.weather-temperature-container {
+    width: 40%;
+    display: inline-block;
+}
+
+.weather-extra-info-container {
+    width: 60%;
+    display: inline-block;
+}
+
+.temperature-value {
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 16px;
+}
+
+.temperature-type {
+    font-size: 20px;
+}
