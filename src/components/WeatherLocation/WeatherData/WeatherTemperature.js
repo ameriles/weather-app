@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import {
     SUNNY,
     FOG
-} from '../constants/weathers';
+} from '../../../constants/weathers';
 
 const icons = {
     [SUNNY]: "day-sunny",
