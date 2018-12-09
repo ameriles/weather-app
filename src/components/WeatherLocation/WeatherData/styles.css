@@ -9,12 +9,16 @@
 }
 
 .weather-temperature-container {
-    width: 40%;
+    width: 50%;
     display: inline-block;
 }
 
+.weather-temperature-container .wi {
+    display: inline;
+}
+
 .weather-extra-info-container {
-    width: 60%;
+    width: 50%;
     display: inline-block;
 }
 
@@ -27,3 +31,4 @@
 .temperature-type {
     font-size: 20px;
 }
+
