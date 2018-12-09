@@ -7,7 +7,7 @@ import {
 } from './../../constants/weathers';
 
 const data = {
-    temperature: 15,
+    temperature: 25,
     humidity: 80,
     wind: "10 m/s",
     weatherState: FOG
