@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
 import LocationList from './components/LocationList'
+import {Grid, Row, Col} from 'react-flexbox-grid';
+import './App.css';
+
 
 const cities = [
   "Buenos Aires,ar",
@@ -18,6 +20,22 @@ class App extends Component {
 
   render() {
     return (
+      // <Grid>
+      //   <Row>
+      //     <Col xs={12} sm={6} md={4} lg={3}>
+      //       <div className="red"></div>
+      //     </Col>
+      //     <Col xs={12} sm={6} md={4} lg={3}>
+      //       <div className="green"></div>
+      //     </Col>
+      //     <Col xs={12} sm={6} md={4} lg={3}>
+      //       <div className="blue"></div>
+      //     </Col>
+      //     <Col xs={12} sm={6} md={4} lg={3}>
+      //       <div className="yellow"></div>
+      //     </Col>
+      //   </Row>
+      // </Grid>
       <div className="App">
         <LocationList cities={cities}
                       onSelectedLocation={this.handleSelectedLocation}/>
