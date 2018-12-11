@@ -8,6 +8,10 @@
     border-radius: 3px;
 }
 
+.weather-location-container {
+    background-color: #ddd;
+}
+
 .weather-temperature-container {
     width: 50%;
     display: inline-block;
