@@ -3,23 +3,6 @@ import PropTypes from 'prop-types';
 import ForecastItem from './ForecastItem';
 import transformForecast from '../services/transformForecast';
 
-const days = [
-    'Lunes',
-    'Martes',
-    'Miercoles',
-    'Jueves',
-    'Viernes',
-    'Sabado',
-    'Domingo'
-];
-
-const data = {
-    temperature: 25,
-    humidity: 10,
-    weatherState: 'normal',
-    wind: '25m/s'
-};
-
 export const api_key = '4e8471cf1925105f577ae112c003bd99';
 export const base_url = 'http://api.openweathermap.org/data/2.5/forecast';
 
@@ -47,8 +30,12 @@ class ForecastExtended extends Component {
         )
     }
 
-    renderForecastItemsDays() {
-        return days.map(day=><ForecastItem weekDay={day} hour={10} data={data}/>);
+    renderForecastItemsDays(forecastData) {
+        return forecastData.map(forecast =>
+            <ForecastItem key={`${forecast.weekDay}_${forecast.hour}`}
+                          weekDay={forecast.weekDay} 
+                          hour={forecast.hour} 
+                          data={forecast.data}/>);
     }
 
     renderProgress() {
@@ -57,11 +44,12 @@ class ForecastExtended extends Component {
 
     render() {
         const {city} = this.props;
+        const {forecastData} = this.state;
         return (<div>
             <h2>Pronóstico Extendido para {city}</h2>
             {
-                this.state.forecastData 
-                    ? this.renderForecastItemsDays()
+                forecastData 
+                    ? this.renderForecastItemsDays(forecastData)
                     : this.renderProgress()
             }
         </div>);
